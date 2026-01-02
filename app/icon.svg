@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <!-- White background -->
+  <rect width="32" height="32" fill="white" rx="4"/>
+  <!-- Logo image -->
+  <image href="https://img1.wsimg.com/isteam/ip/1d13db98-d41c-4037-8855-9a24abfecdfa/blob-ff056cd.png/:/rs=w:198,h:198,cg:true,m/cr=w:198,h:198/qt=q:95" 
+         width="28" 
+         height="28" 
+         x="2" 
+         y="2" 
+         preserveAspectRatio="xMidYMid meet"/>
+</svg>
+
