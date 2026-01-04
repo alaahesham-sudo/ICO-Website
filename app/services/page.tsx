@@ -234,7 +234,7 @@ export default function Services() {
               {serviceCategories.map((category, index) => (
                 <div
                   key={category.id}
-                  className="group rounded-2xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden transition-all duration-500 hover:border-cyan-500/50 hover:shadow-cyan-500/20"
+                  className="group rounded-2xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden transition-all duration-500 hover:border-cyan-500/50 hover:shadow-cyan-500/20 hover-lift hover-glow animate-card-lift"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
@@ -244,7 +244,7 @@ export default function Services() {
                     className="w-full p-6 md:p-8 flex items-center justify-between text-left hover:bg-slate-800/50 transition-colors"
                   >
                     <div className="flex items-center gap-4 flex-1">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/25 to-cyan-500/25 border border-blue-500/30 flex items-center justify-center text-cyan-400 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/25 to-cyan-500/25 border border-blue-500/30 flex items-center justify-center text-cyan-400 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-pulse-glow">
                         {category.icon}
                       </div>
                       <div className="flex-1">
@@ -277,7 +277,7 @@ export default function Services() {
                         {category.services.map((service, serviceIndex) => (
                           <div
                             key={serviceIndex}
-                            className="p-5 rounded-xl bg-slate-900/50 border border-slate-700/30 hover:border-cyan-500/30 hover:bg-slate-800/50 transition-all duration-300 group/item"
+                            className="p-5 rounded-xl bg-slate-900/50 border border-slate-700/30 hover:border-cyan-500/30 hover:bg-slate-800/50 transition-all duration-300 group/item hover-scale"
                             data-aos="fade-up"
                             data-aos-delay={serviceIndex * 50}
                           >
@@ -313,11 +313,11 @@ export default function Services() {
               {industries.map((industry, index) => (
                 <div
                   key={index}
-                  className="group p-6 rounded-xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-slate-700/50 shadow-xl hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-300 hover:scale-105"
+                  className="group p-6 rounded-xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl border border-slate-700/50 shadow-xl hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-300 hover:scale-105 hover-lift hover-glow"
                   data-aos="zoom-y-out"
                   data-aos-delay={index * 50}
                 >
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300 animate-bounce-subtle">
                     {industry.icon}
                   </div>
                   <h3 className="text-lg font-bold text-gray-50 group-hover:text-cyan-400 transition-colors">
@@ -343,7 +343,7 @@ export default function Services() {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 hover-shine"
               >
                 Get Started Today
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

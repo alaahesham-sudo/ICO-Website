@@ -50,7 +50,7 @@ export default function TeamGallery() {
               data-aos="zoom-y-out"
               data-aos-delay={index * 50}
             >
-              <div className="relative aspect-square overflow-hidden rounded-2xl bg-slate-800 shadow-2xl shadow-black/50 border border-slate-700/50 hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+              <div className="relative aspect-square overflow-hidden rounded-2xl bg-slate-800 shadow-2xl shadow-black/50 border border-slate-700/50 hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover-lift hover-glow animate-shimmer">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>

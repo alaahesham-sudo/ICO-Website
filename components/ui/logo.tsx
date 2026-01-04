@@ -32,7 +32,7 @@ export default function Logo() {
           In-Call Outsourcing LLC
         </div>
         <div className="text-xs font-semibold text-gray-400 -mt-0.5">
-          Healthcare BPO Excellence
+          Your Trusted BPO Partner
         </div>
       </div>
     </Link>

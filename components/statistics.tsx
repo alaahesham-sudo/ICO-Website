@@ -117,14 +117,14 @@ export default function Statistics() {
               data-aos="zoom-y-out"
               data-aos-delay={index * 100}
             >
-              <div className="relative h-full rounded-3xl bg-gradient-to-br from-slate-800/95 via-slate-900/95 to-slate-800/95 backdrop-blur-xl p-8 border border-slate-700/50 shadow-2xl shadow-black/50 hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+              <div className="relative h-full rounded-3xl bg-gradient-to-br from-slate-800/95 via-slate-900/95 to-slate-800/95 backdrop-blur-xl p-8 border border-slate-700/50 shadow-2xl shadow-black/50 hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover-lift hover-glow animate-card-lift">
                 {/* Enhanced glow effect on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-12 rounded-3xl transition-opacity duration-500`}></div>
                 
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className="mb-6 flex justify-center">
-                    <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${stat.color} p-4 shadow-lg flex items-center justify-center text-white transform group-hover:rotate-6 transition-transform duration-500`}>
+                    <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${stat.color} p-4 shadow-lg flex items-center justify-center text-white transform group-hover:rotate-6 transition-transform duration-500 animate-pulse-glow`}>
                       {stat.icon}
                     </div>
                   </div>
@@ -167,7 +167,7 @@ export default function Statistics() {
 
                   {/* Progress Bar */}
                   <div className="mt-6">
-                    <div className="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                    <div className="h-2 bg-slate-700/50 rounded-full overflow-hidden animate-progress-wave">
                       <div
                         className={`h-full bg-gradient-to-r ${stat.color} rounded-full transition-all duration-2000 ease-out`}
                         style={{

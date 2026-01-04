@@ -41,7 +41,7 @@ export default function BusinessCategories() {
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-800 shadow-2xl shadow-black/50 border border-slate-700/50 hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+                className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-800 shadow-2xl shadow-black/50 border border-slate-700/50 hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover-lift hover-glow animate-shimmer"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 data-aos="zoom-y-out"

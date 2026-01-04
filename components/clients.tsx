@@ -242,13 +242,13 @@ export default function Clients() {
           {partnershipHighlights.map((highlight, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 border border-slate-700/50 shadow-xl hover:border-emerald-500/50 hover:shadow-emerald-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+              className="group relative rounded-2xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 border border-slate-700/50 shadow-xl hover:border-emerald-500/50 hover:shadow-emerald-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover-lift hover-glow animate-card-lift"
               data-aos="zoom-y-out"
               data-aos-delay={index * 100}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-500`}></div>
               <div className="relative z-10">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${highlight.color} p-4 mb-4 flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${highlight.color} p-4 mb-4 flex items-center justify-center text-white shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 animate-pulse-glow`}>
                   {highlight.icon}
                 </div>
                 <h3 className="text-lg font-bold text-gray-50 mb-2 group-hover:text-emerald-400 transition-colors">
@@ -273,13 +273,13 @@ export default function Clients() {
             {serviceCapabilities.map((capability, index) => (
               <div
                 key={index}
-                className="group relative rounded-xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 border border-slate-700/50 hover:border-emerald-500/50 hover:shadow-emerald-500/20 transition-all duration-300 hover:scale-105"
+                className="group relative rounded-xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 border border-slate-700/50 hover:border-emerald-500/50 hover:shadow-emerald-500/20 transition-all duration-300 hover:scale-105 hover-lift hover-glow"
                 data-aos="fade-up"
                 data-aos-delay={index * 50}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${capability.color} opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300`}></div>
                 <div className="relative z-10">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${capability.color} border ${capability.borderColor} flex items-center justify-center text-emerald-400 mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${capability.color} border ${capability.borderColor} flex items-center justify-center text-emerald-400 mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-pulse-glow`}>
                     {capability.icon}
                   </div>
                   <h4 className="font-bold text-gray-50 mb-3 group-hover:text-emerald-400 transition-colors">
@@ -310,14 +310,14 @@ export default function Clients() {
             {industryCategories.map((industry, index) => (
               <div
                 key={index}
-                className="group relative rounded-xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl p-5 border border-slate-700/50 hover:border-emerald-500/50 hover:shadow-emerald-500/20 transition-all duration-300 hover:scale-105"
+                className="group relative rounded-xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl p-5 border border-slate-700/50 hover:border-emerald-500/50 hover:shadow-emerald-500/20 transition-all duration-300 hover:scale-105 hover-lift hover-glow"
                 data-aos="fade-up"
                 data-aos-delay={index * 50}
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${industry.color} opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300`}></div>
                 <div className="relative z-10 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${industry.color} border ${industry.borderColor} flex items-center justify-center text-emerald-400 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${industry.color} border ${industry.borderColor} flex items-center justify-center text-emerald-400 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-pulse-glow`}>
                       {industry.icon}
                     </div>
                     <div>
@@ -346,11 +346,11 @@ export default function Clients() {
             {achievements.map((achievement, index) => (
               <div
                 key={index}
-                className="group text-center p-4 rounded-xl bg-slate-900/50 border border-slate-700/30 hover:border-emerald-500/30 hover:bg-slate-800/50 transition-all duration-300"
+                className="group text-center p-4 rounded-xl bg-slate-900/50 border border-slate-700/30 hover:border-emerald-500/30 hover:bg-slate-800/50 transition-all duration-300 hover-scale"
                 data-aos="zoom-y-out"
                 data-aos-delay={index * 100}
               >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500/30 to-teal-500/30 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500/30 to-teal-500/30 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-xl font-bold mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300 animate-pulse-glow">
                   {achievement.icon}
                 </div>
                 <h4 className="font-bold text-gray-50 mb-2 group-hover:text-emerald-400 transition-colors">

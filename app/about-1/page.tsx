@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const doctorImages = [
   "https://img1.wsimg.com/isteam/ip/1d13db98-d41c-4037-8855-9a24abfecdfa/BRIAN%20%20GANS%20M.D..PNG/:/rs=w:1300,h:800",
@@ -134,6 +136,35 @@ export default function About() {
     setOpenSection(openSection === id ? null : id);
   };
 
+  useEffect(() => {
+    // Delay to ensure DOM is fully loaded
+    const timer = setTimeout(() => {
+      AOS.init({
+        once: true,
+        disable: "phone",
+        duration: 700,
+        easing: "ease-out-cubic",
+      });
+      // Force refresh after initialization
+      AOS.refresh();
+      // Additional refresh after a short delay to catch any late-loading elements
+      setTimeout(() => {
+        AOS.refresh();
+      }, 100);
+    }, 50);
+
+    // Also refresh on window load
+    const handleLoad = () => {
+      AOS.refresh();
+    };
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <>
       <Header />
@@ -150,7 +181,7 @@ export default function About() {
                 </span>
               </h1>
               <p className="mx-auto max-w-3xl text-lg text-gray-300 font-medium leading-relaxed">
-                12 years of excellence in healthcare BPO and telemarketing services, serving 10,000+ doctors' offices across the USA
+                12 years of excellence in business process outsourcing and telemarketing services, empowering 10,000+ clients across multiple industries nationwide
               </p>
             </div>
           </div>

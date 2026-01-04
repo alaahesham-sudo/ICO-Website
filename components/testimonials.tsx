@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonialCategories = [
   {
@@ -189,6 +191,35 @@ export default function Testimonials() {
     ? testimonials 
     : testimonials.filter(t => t.category === activeCategory);
 
+  useEffect(() => {
+    // Delay to ensure DOM is fully loaded
+    const timer = setTimeout(() => {
+      AOS.init({
+        once: true,
+        disable: "phone",
+        duration: 700,
+        easing: "ease-out-cubic",
+      });
+      // Force refresh after initialization
+      AOS.refresh();
+      // Additional refresh after a short delay to catch any late-loading elements
+      setTimeout(() => {
+        AOS.refresh();
+      }, 100);
+    }, 50);
+
+    // Also refresh on window load
+    const handleLoad = () => {
+      AOS.refresh();
+    };
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/40 via-indigo-950/30 to-slate-950"></div>
@@ -219,7 +250,7 @@ export default function Testimonials() {
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`group flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
+              className={`group flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover-scale ${
                 activeCategory === category.id
                   ? "bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 text-white shadow-lg shadow-cyan-500/30 scale-105"
                   : "bg-slate-800/50 text-gray-300 border border-slate-700/50 hover:border-cyan-500/50 hover:text-cyan-400 hover:scale-105"
@@ -236,7 +267,7 @@ export default function Testimonials() {
           {filteredTestimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className="group relative rounded-2xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 border border-slate-700/50 shadow-xl hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+              className="group relative rounded-2xl bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl p-6 border border-slate-700/50 shadow-xl hover:border-cyan-500/50 hover:shadow-cyan-500/20 transition-all duration-500 hover:scale-105 hover:-translate-y-2 hover-lift hover-glow animate-card-lift"
               data-aos="zoom-y-out"
               data-aos-delay={index * 50}
             >
@@ -299,7 +330,7 @@ export default function Testimonials() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 text-white font-bold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 text-white font-bold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 hover-shine"
           >
             Get Started Today
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

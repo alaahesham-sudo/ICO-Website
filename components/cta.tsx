@@ -29,7 +29,7 @@ export default function Cta() {
               "Your Efforts Are Always Appreciated"
             </p>
             <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center" data-aos="zoom-y-out" data-aos-delay={400}>
-              <a className="group btn mb-4 w-full bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 text-white shadow-xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 sm:mb-0 sm:w-auto px-8 py-3.5 rounded-xl font-semibold" href="/contact">
+              <a className="group btn mb-4 w-full bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 text-white shadow-xl shadow-cyan-500/30 hover:shadow-cyan-500/50 hover:scale-105 transition-all duration-300 sm:mb-0 sm:w-auto px-8 py-3.5 rounded-xl font-semibold hover-shine" href="/contact">
                 <span className="relative inline-flex items-center gap-2">
                   Get Started Now
                   <span className="ml-1 tracking-normal text-cyan-200 transition-transform group-hover:translate-x-1">→</span>
